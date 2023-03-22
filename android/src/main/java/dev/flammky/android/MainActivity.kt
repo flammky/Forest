@@ -1,6 +1,6 @@
-package com.example.android
+package dev.flammky.android
 
-import com.example.common.App
+import dev.flammky.vars.forest.common.App
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity

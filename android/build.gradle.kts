@@ -4,7 +4,7 @@ plugins {
     kotlin("android")
 }
 
-group "com.example"
+group "dev.flammky.var.forest"
 version "1.0-SNAPSHOT"
 
 repositories {
@@ -17,17 +17,19 @@ dependencies {
 }
 
 android {
-    compileSdkVersion(33)
+
+    compileSdkVersion = "android-32"
+
     defaultConfig {
-        applicationId = "com.example.android"
-        minSdkVersion(24)
-        targetSdkVersion(33)
+        applicationId = "dev.flammky.var.forest"
+        minSdk = 21
+        targetSdk = 32
         versionCode = 1
         versionName = "1.0-SNAPSHOT"
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     buildTypes {
         getByName("release") {

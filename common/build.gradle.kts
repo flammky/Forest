@@ -4,9 +4,10 @@ plugins {
     kotlin("multiplatform")
     id("org.jetbrains.compose")
     id("com.android.library")
+    id("org.jetbrains.kotlin.plugin.parcelize")
 }
 
-group = "com.example"
+group "dev.flammky.var.forest"
 version = "1.0-SNAPSHOT"
 
 kotlin {
@@ -22,6 +23,9 @@ kotlin {
                 api(compose.runtime)
                 api(compose.foundation)
                 api(compose.material)
+                api(compose.ui)
+                api("io.github.aakira:napier:2.6.1")
+                api("com.slack.circuit:circuit-core:0.7.0")
             }
         }
         val commonTest by getting {
@@ -46,18 +50,25 @@ kotlin {
             }
         }
         val desktopTest by getting
+
+        /*
+        val jvmMain by getting
+        val iosMain by getting
+        */
     }
 }
 
 android {
-    compileSdkVersion(33)
+    compileSdkVersion = "android-32"
+
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
+
     defaultConfig {
-        minSdkVersion(24)
-        targetSdkVersion(33)
+        minSdk = 21
+        targetSdk = 32
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 }

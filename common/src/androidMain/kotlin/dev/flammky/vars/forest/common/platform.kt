@@ -1,4 +1,4 @@
-package com.example.common
+package dev.flammky.vars.forest.common
 
 actual fun getPlatformName(): String {
     return "Android"

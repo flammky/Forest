@@ -7,7 +7,7 @@ plugins {
     id("org.jetbrains.compose")
 }
 
-group = "com.example"
+group "dev.flammky.var.forest"
 version = "1.0-SNAPSHOT"
 
 

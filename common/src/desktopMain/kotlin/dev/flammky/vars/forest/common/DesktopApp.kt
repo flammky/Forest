@@ -1,4 +1,4 @@
-package com.example.common
+package dev.flammky.vars.forest.common
 
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.runtime.Composable
